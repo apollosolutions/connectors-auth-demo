@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=router.config.json
+preview_connectors:
+  expose_sources_in_context: true
+coprocessor:
+  url: http://localhost:8000
+  execution:
+    request:
+      context: true
+telemetry:
+  instrumentation:
+    spans:
+      mode: spec_compliant

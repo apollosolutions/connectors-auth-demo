@@ -1,0 +1,26 @@
+extend schema
+  @link(url: "https://specs.apollo.dev/federation/v2.10")
+  @link(
+    url: "https://specs.apollo.dev/connect/v0.1"
+    import: ["@connect", "@source"]
+  )
+  @source(
+    name: "v1"
+    http: {
+      baseURL: "http://localhost:8000/api"
+      headers: [
+        {
+          name: "Authorization"
+          value: "Bearer {$context.apiKeys.connectors_v1}"
+        }
+      ]
+    }
+  )
+
+type Query {
+  me: Account @connect(source: "v1", http: { GET: "/account" }, selection: "id")
+}
+
+type Account {
+  id: ID!
+}

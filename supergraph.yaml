@@ -1,0 +1,6 @@
+federation_version: =2.10.0-preview.0
+subgraphs:
+  connectors:
+    routing_url: http://none
+    schema:
+      file: connectors.graphql
