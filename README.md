@@ -7,7 +7,7 @@ _______________
 Requirements:
 
 - [Rover](https://www.apollographql.com/docs/rover/getting-started)
-- [Deno](https://docs.deno.com/runtime/getting_started/installation/)
+- [Deno](https://docs.deno.com/runtime/getting_started/installation/) (For the coprocessor and mock API. Your coprocessor can be written in any language.)
 
 Make a `.env` file:
 
